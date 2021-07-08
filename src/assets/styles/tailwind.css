@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.h-bg-primary{
+  background-color: #9e005d;
+}
+.h-bg-secondary{
+  background-color: #662d91;
+}
+
+.h-bg-ternary{
+  background-color: #7f305e;
+}
+
+.h-bg-dark{
+  background-color: #212831;
+}
+
+.h-primary{
+  color: #9e005d;
+}
+.h-secondary{
+  color: #662d91;
+}
+
+.h-ternary{
+  color: #7f305e;
+}
+
+.h-dark{
+  color: #212831;
+}
+
+.esgotado-bg{
+  background-color: rgba(220, 38, 38)
+}
+
+.position-ProductFeactured-price{
+  top: 10%;
+  right: 15%;
+}
