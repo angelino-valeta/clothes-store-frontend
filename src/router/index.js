@@ -24,6 +24,10 @@ import Order from '@/views/Order/Order.vue';
 import OrderList from '@/views/Order/OrderList.vue';
 
 
+// Addresses Routers
+import Addresses from '@/views/Addresses/Addresses.vue';
+
+
 // PaymentMethod Routers
 import PaymentMethod from '@/views/Payment/PaymentMethod.vue';
 
@@ -42,6 +46,7 @@ import AdminUpdateProduct from "@/views/Admin/Products/UpdateProduct.vue";
 import AdminAddUser from "@/views/Admin/Users/AddUser.vue";
 import AdminUpadateUser from "@/views/Admin/Users/UpdateUser.vue";
 import AdminUsers from "@/views/Admin/Users/Users.vue";
+
 
 // Error pages not found...
 import NotFound from "@/views/Error/NotFound";
@@ -123,6 +128,12 @@ const routes = [
     meta: { title: "Encomenda" }
   },
   {
+    path: "/addresses",
+    name: "address-list",
+    component: Addresses,
+    meta: { title: "Endereços" }
+  },
+  {
     path: "/payment-method",
     name: "payment-method",
     component: PaymentMethod,
@@ -132,68 +143,68 @@ const routes = [
     path: "/admin/profile",
     name: "admin-profile",
     component: AdminProfile,
-    meta: { isAdmin: true, title: "Perfil do Administrador" }
+    meta: { isAuthenticated: true, title: "Perfil do Administrador" }
   },
   {
     path: "/admin",
     redirect: "/admin/dashboard",
     name: "admin",
     component: Dashboard,
-    meta: { isAdmin: true, title: "Gestão da Loja" },
+    meta: { isAuthenticated: true, title: "Gestão da Loja" },
     children: [
       {
         path: "/admin/profile",
         name: "admin-profile",
         component: AdminProfile,
-        meta: { isAdmin: true, title: "Perfil do Administrador" }
+        meta: { isAuthenticated: true, title: "Perfil do Administrador" }
       },
       {
         path: "/admin/order/:orderId",
         name: "admin-order",
         component: AdminOrder,
-        meta: { isAdmin: true, title: "Encomenda" }
+        meta: { isAuthenticated: true, title: "Encomenda" }
       },
       {
         path: "/admin/orders",
         name: "admin-orders",
         component: AdminOrders,
-        meta: { isAdmin: true, title: "Lista de Encomendas" }
+        meta: { isAuthenticated: true, title: "Lista de Encomendas" }
       },
       {
         path: "/admin/add-product",
         name: "admin-add-product",
         component: AdminAddProduct,
-        meta: { isAdmin: true, title: "Adicionar Produto" }
+        meta: { isAuthenticated: true, title: "Adicionar Produto" }
       },
       {
         path: "/admin/products",
         name: "admin-products",
         component: AdminProducts,
-        meta: { isAdmin: true, title: "Lista de Produtos" }
+        meta: { isAuthenticated: true, title: "Lista de Produtos" }
       },
       {
         path: "/admin/update-product/:productId",
         name: "admin-product",
         component: AdminUpdateProduct,
-        meta: { isAdmin: true, title: "Actualizar Produto" }
+        meta: { isAuthenticated: true, title: "Actualizar Produto" }
       },
       {
         path: "/admin/add-user",
         name: "admin-add-user",
         component: AdminAddUser,
-        meta: { isAdmin: true, title: "Adicionar Usuário" }
+        meta: { isAuthenticated: true, title: "Adicionar Usuário" }
       },
       {
         path: "/admin/update-user/:userId",
         name: "admin-update-user",
         component: AdminUpadateUser,
-        meta: { isAdmin: true, title: "Actualizar dados do Usuário" }
+        meta: { isAuthenticated: true, title: "Actualizar dados do Usuário" }
       },
       {
         path: "/admin/users",
         name: "admin-users",
         component: AdminUsers,
-        meta: { isAdmin: true, title: "Lista de Usuários" }
+        meta: { isAuthenticated: true, title: "Lista de Usuários" }
       },
     ],
   },
