@@ -1,6 +1,6 @@
 <template>
 <div class="fixed w-full px-6 shadow-lg bg-white dark:bg-gray-700 h-16 items-center z-50 marginb">
-<div class="w-full h-16 flex items-center justify-between">
+<div class="w-full xl:max-w-screen-xl mx-auto h-16 flex items-center justify-between">
   <div class="flex items-center">
     <div class="w-16">
       <router-link to="/" class="brand">

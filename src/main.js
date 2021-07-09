@@ -16,5 +16,6 @@ import "./assets/styles/fonts.css";
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount("#app");
