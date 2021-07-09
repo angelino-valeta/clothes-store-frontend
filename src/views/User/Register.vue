@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap w-full">
+  <div class="flex flex-wrap w-full -margin-t">
     <div class="w-1/2 shadow-2xl h-bg-primary">
       <img class="hidden object-cover w-full h-screen md:block" :src="coverImage"/>
     </div>

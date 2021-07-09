@@ -1,19 +1,19 @@
 <template>
-  <div>
-    Product details
+  <div class="">
+    <ProductInfo />
   </div>
 </template>
 
 <script>
+import ProductInfo from "@/components/Product/ProductInfo.vue";
 
 export default {
   name: "ProductDetails",
   components:{
-
+    ProductInfo
   },
   data() {
     return {
-
     };
   },
   computed: {},

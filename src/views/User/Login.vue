@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap w-full">
+  <div class="flex flex-wrap w-full -margin-t">
   <div class="flex flex-col w-full md:w-1/2 h-bg-secondary">
     <div class="flex justify-center items-center pt-12 mb-4 md:mb-16">
       <router-link to="/" class="brand">
