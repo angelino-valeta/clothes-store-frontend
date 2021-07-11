@@ -101,6 +101,9 @@
 </template>
 
 <script>
+
+import ProductsService from "@/services/ProductsService.js";
+
 import jacket from "@/assets/img/lightweight-jacket-0.png";
 
 export default {
@@ -110,8 +113,17 @@ export default {
   },
   data() {
     return {
+      product: null,
+      id: null,
       jacket
     };
+  },
+   async mounted() {
+    this.id = this.$route.params.productId
+    this.product = (
+      await ProductsService.getProduct(this.id)
+    ).data
+    console.log(this.product.data)
   },
   computed: {},
   methods: {

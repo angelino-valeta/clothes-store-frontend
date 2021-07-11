@@ -4,16 +4,16 @@
       <img class="hidden object-cover w-full h-screen md:block" :src="coverImage"/>
     </div>
   <div class="flex flex-col w-full md:w-1/2 h-bg-secondary">
-    <div class="flex justify-center items-center mt-4 mb-2">
+    <div class="max-w-sm mx-auto flex flex-col justify-center px-8 my-auto md:justify-start md:px-2">
+       <div class="flex justify-center items-center mb-2">
       <router-link to="/" class="brand">
         <img :src="logo" alt="logo helena" />
       </router-link>
     </div>
-    <div class="flex flex-col justify-center px-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
-    <p class="text-2xl text-center text-white mb-4">
-      Seja bem vindo a nossa loja online.
+    <p class="text-2xl text-center text-white">
+      Bem vindo a nossa loja online.
     </p>
-    <form class="flex flex-col pt-2">
+    <form class="flex flex-col pt-4">
       <div class="">
         <div class="flex flex-col mb-2">
           <div class="flex relative">

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <main class="bg-white relative overflow-hidden h-screen relative">
+    <main class="bg-white relative overflow-hidden ">
         <div class="container mx-auto px-6 md:px-12 relative z-10 flex items-center py-8">
             <div class="container mx-auto px-6 flex flex-col justify-between items-center relative">
-                <div class="flex w-full items-center justify-center space-x-12 flex-col md:flex-row mb-16 md:mb-8">
+                <div class="flex w-full items-center justify-center space-x-12 flex-col md:flex-row mb-4 md:mb-8">
                     <h1 class="font-thin text-center text-4xl text-gray-800">
                         Desculpe! estas perdido ?
                     </h1>

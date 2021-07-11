@@ -54,157 +54,207 @@ import Unauthorized from "@/views/Error/Unauthorized";
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "home",
     component: Home,
-    meta: { title: "Helena Shop" }
+    meta: {
+      title: "Helena Shop"
+    }
   },
   {
     path: "/register",
     name: "register",
     component: Register,
-    meta: { title: "Register" }
+    meta: {
+      title: "Register"
+    }
   },
   {
     path: "/login",
     name: "login",
     component: Login,
-    meta: { title: "Login" }
+    meta: {
+      title: "Login"
+    }
   },
   {
     path: "/profile",
     name: "profile",
     component: Profile,
-    meta: { title: "Seu perfil" }
+    meta: {
+      title: "Seu perfil"
+    }
   },
   {
     path: "/product/:productId",
     name: "ProductDetails",
     component: Product,
-    meta: { title: "Informações do produto" }
+    meta: {
+      title: "Informações do produto"
+    }
   },
   {
     path: "/products",
     name: "products",
     component: Products,
-    meta: { title: "Produtos" }
+    meta: {
+      title: "Produtos"
+    }
   },
   {
     path: "/products/:category",
     name: "category-products",
     component: CategoryProducts,
-    meta: { title: "Categorias" }
+    meta: {
+      title: "Categorias"
+    }
   },
   {
     path: "/cart",
     name: "cart",
     component: Cart,
-    meta: { title: "Seu carrinho de compra" }
+    meta: {
+      title: "Seu carrinho de compra"
+    }
   },
   {
     path: "/wishlist",
     name: "wishlist",
     component: Wishlist,
-    meta: { title: "Lista de roupas desejadas" }
+    meta: {
+      title: "Lista de roupas desejadas"
+    }
   },
   {
     path: "/checkout",
     name: "checkout",
     component: Checkout,
-    meta: { title: "Checkout" }
+    meta: {
+      title: "Checkout"
+    }
   },
   {
     path: "/orders",
-    name: "order",
+    name: "orders",
     component: OrderList,
-    meta: { title: "Minhas Encomendas" }
+    meta: {
+      title: "Minhas Encomendas"
+    }
   },
   {
     path: "/order/:currentUser",
     name: "order",
     component: Order,
-    meta: { title: "Encomenda" }
+    meta: {
+      title: "Encomenda"
+    }
   },
   {
     path: "/addresses",
     name: "address-list",
     component: Addresses,
-    meta: { title: "Endereços" }
+    meta: {
+      title: "Endereços"
+    }
   },
   {
     path: "/payment-method",
     name: "payment-method",
     component: PaymentMethod,
-    meta: { title: "Método de pagamento" }
+    meta: {
+      title: "Método de pagamento"
+    }
   },
   {
     path: "/admin/profile",
     name: "admin-profile",
     component: AdminProfile,
-    meta: { isAuthenticated: true, title: "Perfil do Administrador" }
+    meta: {
+      isAuthenticated: true,
+      title: "Perfil do Administrador"
+    }
   },
   {
     path: "/admin",
     redirect: "/admin/dashboard",
     name: "admin",
     component: Dashboard,
-    meta: { isAuthenticated: true, title: "Gestão da Loja" },
-    children: [
-      {
-        path: "/admin/profile",
-        name: "admin-profile",
-        component: AdminProfile,
-        meta: { isAuthenticated: true, title: "Perfil do Administrador" }
-      },
-      {
+    meta: {
+      isAuthenticated: true,
+      title: "Gestão da Loja"
+    },
+    children: [{
         path: "/admin/order/:orderId",
         name: "admin-order",
         component: AdminOrder,
-        meta: { isAuthenticated: true, title: "Encomenda" }
+        meta: {
+          isAuthenticated: true,
+          title: "Encomenda"
+        }
       },
       {
         path: "/admin/orders",
         name: "admin-orders",
         component: AdminOrders,
-        meta: { isAuthenticated: true, title: "Lista de Encomendas" }
+        meta: {
+          isAuthenticated: true,
+          title: "Lista de Encomendas"
+        }
       },
       {
         path: "/admin/add-product",
         name: "admin-add-product",
         component: AdminAddProduct,
-        meta: { isAuthenticated: true, title: "Adicionar Produto" }
+        meta: {
+          isAuthenticated: true,
+          title: "Adicionar Produto"
+        }
       },
       {
         path: "/admin/products",
         name: "admin-products",
         component: AdminProducts,
-        meta: { isAuthenticated: true, title: "Lista de Produtos" }
+        meta: {
+          isAuthenticated: true,
+          title: "Lista de Produtos"
+        }
       },
       {
         path: "/admin/update-product/:productId",
         name: "admin-product",
         component: AdminUpdateProduct,
-        meta: { isAuthenticated: true, title: "Actualizar Produto" }
+        meta: {
+          isAuthenticated: true,
+          title: "Actualizar Produto"
+        }
       },
       {
         path: "/admin/add-user",
         name: "admin-add-user",
         component: AdminAddUser,
-        meta: { isAuthenticated: true, title: "Adicionar Usuário" }
+        meta: {
+          isAuthenticated: true,
+          title: "Adicionar Usuário"
+        }
       },
       {
         path: "/admin/update-user/:userId",
         name: "admin-update-user",
         component: AdminUpadateUser,
-        meta: { isAuthenticated: true, title: "Actualizar dados do Usuário" }
+        meta: {
+          isAuthenticated: true,
+          title: "Actualizar dados do Usuário"
+        }
       },
       {
         path: "/admin/users",
         name: "admin-users",
         component: AdminUsers,
-        meta: { isAuthenticated: true, title: "Lista de Usuários" }
+        meta: {
+          isAuthenticated: true,
+          title: "Lista de Usuários"
+        }
       },
     ],
   },
@@ -212,13 +262,17 @@ const routes = [
     path: "/error/401",
     name: "unauthorized",
     component: Unauthorized,
-    meta: { title: "Acesso negado" }
+    meta: {
+      title: "Acesso negado"
+    }
   },
   {
     path: "/*",
     name: "not-found",
     component: NotFound,
-    meta: { title: "Página não encontrada" }
+    meta: {
+      title: "Página não encontrada"
+    }
   }
 
 ];

@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <Header class="mb-8" />
-    <div class="margin-top"></div>
+    <Header
+      v-if="headerIsVisible"
+      class="mb-8" />
+    <div
+      v-if="headerIsVisible"
+      class="margin-top"></div>
     <router-view :key="$route.fullPath" />
     <Footer />
   </div>
@@ -11,11 +15,26 @@
 import Header from "@/components/Common/Header.vue";
 import Footer from "@/components/Common/Footer.vue";
 
+import {mapActions} from 'vuex'
+
 export default {
   components: {
     Header,
     Footer,
   },
+computed: {
+
+  ...mapActions('CurrentUser', [
+      'setUser',
+      'setToken'
+    ]),
+  headerIsVisible () {
+    if (this.$route.name === 'login') {
+      return false
+    }
+      return true
+    }
+  }
 };
 </script>
 

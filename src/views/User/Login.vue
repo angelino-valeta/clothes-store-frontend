@@ -1,16 +1,16 @@
 <template>
-  <div class="flex flex-wrap w-full -margin-t">
+  <div class="flex flex-wrap w-full">
   <div class="flex flex-col w-full md:w-1/2 h-bg-secondary">
-    <div class="flex justify-center items-center pt-12 mb-4 md:mb-16">
+    <div class="max-w-sm mx-auto flex flex-col justify-center px-8 my-auto md:justify-start md:px-2">
+       <div class="flex justify-center items-center mb-2">
       <router-link to="/" class="brand">
         <img :src="logo" alt="logo helena" />
       </router-link>
     </div>
-    <div class="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
     <p class="text-2xl text-center text-white">
-      Bem vindo a sua loja online de roupas.
+      Bem vindo a sua loja online.
     </p>
-    <form class="flex flex-col pt-3 md:pt-8">
+    <form class="flex flex-col pt-4">
       <div class="flex flex-col mb-2">
         <div class="flex relative">
           <span class="rounded-l-md inline-flex  items-center px-3 border-t border-l border-b  border-gray-300 h-bg-dark text-white shadow-sm text-sm">
@@ -103,9 +103,8 @@ export default {
       'setUser',
       'setToken'
     ]),
-
     async login() {
-      this.setToken('fhghgyuf')
+      this.$store.dispatch("CurrentUser/setToken", 'token')
     }
   }
 };
