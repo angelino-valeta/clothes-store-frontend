@@ -15,7 +15,7 @@
         <div class="shadow-lg rounded-2xl p-12 bg-white dark:bg-gray-700 w-full">
           <div>
             <div>
-              <form @submit="createProduct()">
+              <form @submit.stop.prevent="createProduct()">
                 <input
                   type="text"
                   id="name"
@@ -177,16 +177,16 @@ export default {
       data.append("stock", this.stock);
       data.append("isFeatured", this.isFeatured);
       data.append("featuredIn", this.featuredIn);
-      data.append("ratings", this.ratings);
-      data.append("numOfReviews", this.numOfReviews);
       data.append("image", this.selectedFile, this.selectedFile.name);
+
+      console.log(data);
 
       try {
         await ProductsService.newProduct(data);
         // Vue.$toast.error(response.data.data.name + " Adicionado.");
         this.$router.push({ path: "/admin/products" });
       } catch (error) {
-        this.messageError = error;
+        this.messageError = error.data;
         Vue.$toast.error(this.messageError);
       }
     }

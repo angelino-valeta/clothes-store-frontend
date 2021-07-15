@@ -8,9 +8,11 @@
               <h1 class="pt-4 font-extrabold text-4xl">{{ product.data.name }}</h1>
               <div class="mt-2">
                 <div class="py-2 text-lg font-semibold">Descrição:</div>
-                <p
+                <div
                   class="text-gray-500 font-light text-lg text-left leading-normal tracking-tight"
-                >{{ product.data.description }}</p>
+                >
+                  <div v-html="product.data.description"></div>
+                </div>
               </div>
             </div>
           </div>
