@@ -10,12 +10,12 @@
         >Ver todos produtos</router-link>
       </div>
     </div>
-    <div class="w-full md:w-1/2">
+    <div class="w-full m-auto md:w-1/2">
       <div class="mb-4 sm:ml-4 xl:mr-4">
         <div class="shadow-lg rounded-2xl p-12 bg-white dark:bg-gray-700 w-full">
           <div>
             <div>
-              <form>
+              <form @submit="createProduct()">
                 <input
                   type="text"
                   id="name"
@@ -44,29 +44,61 @@
                       class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                       placeholder="Stock"
                     />
-                    <select>
-                      <option
-                        v-for="category in categories.data"
-                        :key="category.id"
-                        :value="category.id"
-                      >{{ category.name }}</option>
-                    </select>
+                    <div class="flex items-center space-x-4">
+                      <label>Categorias</label>
+                      <select
+                        class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        v-model="categoryId"
+                        v-if="categories.success"
+                      >
+                        <option
+                          v-for="category in categories.data"
+                          :key="category.id"
+                          :value="category.id"
+                        >{{ category.name }}</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
                 <div class="relative mt-4">
-                  <div class="flex space-x-4">
-                    <input
-                      type="number"
-                      id="stock"
-                      v-model="stock"
-                      required
-                      class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                      placeholder="Stock"
-                    />
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-center mt-6">
+                      <div>
+                        <label class="flex items-center space-x-3 mb-3">
+                          <input
+                            v-model="isFeatured"
+                            type="checkbox"
+                            class="form-tick appearance-none bg-white bg-check h-6 w-6 border border-gray-300 rounded-md checked:bg-blue-500 checked:border-transparent focus:outline-none"
+                          />
+                          <span class="text-gray-700 dark:text-white font-normal">Destaque Top</span>
+                        </label>
+                        <label class="flex items-center space-x-3 mb-3">
+                          <input
+                            v-model="featuredIn"
+                            type="checkbox"
+                            class="form-tick appearance-none bg-white bg-check h-6 w-6 border border-gray-300 rounded-md checked:bg-pink-500 checked:border-transparent focus:outline-none"
+                          />
+                          <span class="text-gray-700 dark:text-white font-normal">Destaque</span>
+                        </label>
+                      </div>
+                    </div>
                     <div>
                       <div>
-                        <label class="border p-4">
-                          <input type="file" />
+                        <label
+                          class="flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide cursor-pointer hover:bg-blue hover:text-purple-500"
+                        >
+                          <svg
+                            class="w-8 h-8"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z"
+                            />
+                          </svg>
+                          <span class="mt-2 text-base leading-normal">Seleciona uma imagem</span>
+                          <input type="file" @change="onFileSelected" class="hidden" />
                         </label>
                       </div>
                     </div>
@@ -79,19 +111,13 @@
                   >Descrição do produto</label>
                   <vue-editor required id="input-description" v-model="description"></vue-editor>
                 </div>
+                <button
+                  class="px-4 py-2 text-base font-semibold text-white h-bg-secondary rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
+                  type="submit"
+                >Adicionar</button>
               </form>
             </div>
             <div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="w-full sm:w-1/2 xl:w-1/3">
-      <div class="mb-4 sm:ml-4 xl:mr-4">
-        <div class="shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-700 w-full">
-          <h1 class="mb-4">Categoria</h1>
-          <div>
-            <form></form>
           </div>
         </div>
       </div>
@@ -125,12 +151,21 @@ export default {
       messageError: null
     };
   },
+  async mounted() {
+    try {
+      this.categories = (await CategoryService.getCategories()).data;
+      console.log(this.categories);
+    } catch (error) {
+      this.messageError = error;
+      Vue.$toast.error(this.messageError);
+    }
+  },
   methods: {
     onFileSelected(event) {
       this.selectedFile = event.target.files[0];
       this.fileName = event.target.files[0].name;
     },
-    async save() {
+    async createProduct() {
       this.description = this.description.replace(/<p><br><\/p>/g, "");
 
       let data = new FormData();
@@ -147,17 +182,9 @@ export default {
       data.append("image", this.selectedFile, this.selectedFile.name);
 
       try {
-        const response = (await ProductsService.newProduct(data)).data;
-        Vue.$toast.error(response.data.data.name + " Adicionado.");
-        this.$router.push({ path: "/admin-products" });
-      } catch (error) {
-        this.messageError = error.response.data.message;
-        Vue.$toast.error(this.messageError);
-      }
-    },
-    async mounted() {
-      try {
-        this.categories = (await CategoryService.getCategories()).data;
+        await ProductsService.newProduct(data);
+        // Vue.$toast.error(response.data.data.name + " Adicionado.");
+        this.$router.push({ path: "/admin/products" });
       } catch (error) {
         this.messageError = error;
         Vue.$toast.error(this.messageError);
