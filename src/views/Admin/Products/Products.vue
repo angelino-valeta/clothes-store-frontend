@@ -44,9 +44,10 @@
                                   @click="$router.push({ path: `/product/${product.id}` })"
                                   class="text-lg flex-1 mr-auto cursor-pointer text-gray-800 font-semibold truncate overflow-hidden"
                                 >{{product.name}}</h2>
-                                <div
+                                <button
+                                  @click="deleteProduct(product)"
                                   class="items-center bg-red-500 text-white text-xs px-2 py-1 ml-3 rounded-lg"
-                                >Delete</div>
+                                >Delete</button>
                               </div>
                             </div>
                             <div class="text-xl text-gray-500 font-semibold mt-1 mb-4">
@@ -91,6 +92,12 @@ export default {
   async mounted() {
     this.products = (await ProductsService.getProducts()).data;
     this.userLoggedIn = this.$store.state.CurrentUser.userLoggedIn;
+  },
+  methods: {
+    async deleteProduct(product) {
+      await ProductsService.deleteProduct(product.id);
+      window.location.reload();
+    }
   }
 };
 </script>

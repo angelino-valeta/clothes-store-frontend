@@ -26,9 +26,9 @@ export default {
         return Api().post('admin/product/new', credentials)
     },
     updateProduct(id, credentials) {
-        return Api().put(`admin/products/${id}`, credentials)
+        return Api().put(`admin/product/${id}`, credentials)
     },
     deleteProduct(id) {
-        return Api().delete(`product/${id}`)
+        return Api().delete(`/admin/product/${id}`)
     }
 }
