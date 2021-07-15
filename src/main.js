@@ -2,8 +2,12 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router"
 import store from "./store"
+import VueToast from 'vue-toast-notification';
+import 'vue-toast-notification/dist/theme-sugar.css';
 
-import { sync } from 'vuex-router-sync'
+import {
+  sync
+} from 'vuex-router-sync'
 const unsync = sync(store, router)
 
 import "@/assets/styles/tailwind.css";
@@ -13,6 +17,10 @@ unsync();
 
 import "./assets/styles/tailwind.css";
 import "./assets/styles/fonts.css";
+
+Vue.use(VueToast, {
+  position: 'top'
+})
 
 new Vue({
   router,

@@ -20,8 +20,11 @@
     "tailwindcss-question-mark": "^0.1.0",
     "vue": "^2.6.11",
     "vue-dynamic-marquee": "^0.1.7",
+    "vue-m-message": "^3.1.0",
     "vue-router": "^3.5.1",
-    "vue2-editor": "^2.10.2",
+    "vue-tailwind": "^2.4.1",
+    "vue-toast-notification": "^0.6.2",
+    "vue2-editor": "2.10.2",
     "vuex": "^3.6.2",
     "vuex-persistedstate": "^4.0.0-beta.3",
     "vuex-router-sync": "^5.0.0"

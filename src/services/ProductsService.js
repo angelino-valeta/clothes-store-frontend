@@ -17,7 +17,7 @@ export default {
         categoryId,
         limit
     }) {
-        return Api().get(`products/recomendation/${categoryId}/${limit}`)
+        return Api().get(`products/recomendation/${categoryId}?limit=${limit}`)
     },
     getProduct(id) {
         return Api().get(`product/${id}`)

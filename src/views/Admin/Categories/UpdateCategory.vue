@@ -1,15 +1,16 @@
 <template>
-  <div class="flex flex-col flex-wrap sm:flex-row"></div>
+  <div>Update Category</div>
 </template>
 
 <script>
 export default {
-  name: "Dashboard",
+  name: "UpdateCategory",
   components: {},
   data() {
     return {};
   }
 };
 </script>
+
 <style>
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main class="bg-white relative overflow-hidden h-screen relative">
+    <main class="bg-white relative overflow-hidden">
         <header class="absolute top-0 left-0 right-0 z-20">
             <nav class="container mx-auto px-6 md:px-12 py-4">
                 <div class="md:flex justify-between items-center">
@@ -17,9 +17,9 @@
                 </div>
             </nav>
         </header>
-        <div class="container mx-auto px-6 md:px-12 relative z-10 flex items-center py-32">
+        <div class="container mx-auto px-6 md:px-12 relative z-10 flex items-center py-4">
             <div class="container mx-auto px-6 flex flex-col justify-between items-center relative">
-                <div class="flex w-full items-center justify-center space-x-12 flex-col md:flex-row mb-16 md:mb-8">
+                <div class="flex w-full items-center justify-center space-x-12 flex-col md:flex-row mb-4 ">
                     <h1 class="font-thin text-center text-2xl text-gray-800">
                         Acesso negado.
                     </h1>
@@ -27,7 +27,7 @@
                       Voltar
                     </router-link>
                 </div>
-                <div class="block w-full mx-auto mt-6 md:mt-0 relative">
+                <div class="block w-full mx-auto mt-4 md:mt-0 relative">
                   <div class="max-w-sm m-auto">
                       <img :src="acessDenied" alt="Acesso negado"/>
                   </div>

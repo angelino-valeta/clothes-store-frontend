@@ -21,7 +21,7 @@
                     </div>
                     </div>
                   </div>
-                  <img :src="dropShirt" alt="Just a flower" class=" w-full object-fill rounded-2xl">
+                  <img :src="`http://localhost:4000/${productsFeacturedIn.data[0].image}`" :alt="productsFeacturedIn.data[0].name + ' photo'" class=" w-full object-fill rounded-2xl">
                 </div>
               </div>
             </div>
@@ -43,7 +43,8 @@
                     </div>
                     </div>
                   </div>
-                  <img :src="mask" alt="Just a flower" class=" w-full object-fill rounded-2xl">
+                  <img :src="`http://localhost:4000/${productsFeacturedIn.data[1].image}`" 
+                  :alt="productsFeacturedIn.data[1].name + ' photo'" class=" w-full object-fill rounded-2xl">
                 </div>
               </div>
             </div>
@@ -69,7 +70,8 @@
                     </div>
                     </div>
                   </div>
-                  <img :src="tshirt5" alt="Just a flower" class=" w-full object-fill rounded-2xl">
+                  <img :src="`http://localhost:4000/${productsFeacturedIn.data[2].image}`" 
+                  :alt="productsFeacturedIn.data[2].name + ' photo'" class=" w-full object-fill rounded-2xl">
                 </div>
               </div>
             </div>
@@ -91,7 +93,9 @@
                     </div>
                     </div>
                   </div>
-                  <img :src="tshirt7" alt="Just a flower" class=" w-full object-fill rounded-2xl">
+                  <img :src="`http://localhost:4000/${productsFeacturedIn.data[3].image}`" 
+                  :alt="productsFeacturedIn.data[3].name + ' photo'"
+                   class=" w-full object-fill rounded-2xl">
                 </div>
               </div>
             </div>
@@ -106,10 +110,7 @@
 
 import ProductsService from "@/services/ProductsService.js";
 
-import tshirt7 from "@/assets/img/mockup-cf2e0793__12098.1601231766.png";
-import tshirt5 from "@/assets/img/mockup-a69ed7d5__19588.1601231767.png"
-import mask from "@/assets/img/mask-1.png";
-import dropShirt from "@/assets/img/drop-shirt.png";
+
 
 export default {
   name: "Marquee",
@@ -120,10 +121,7 @@ export default {
     return {
       productsFeacturedIn: [],
       limit: 4,
-      dropShirt,
-      mask,
-      tshirt5,
-      tshirt7
+     
     }
   },
   async mounted() {

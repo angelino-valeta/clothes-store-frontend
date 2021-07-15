@@ -1,15 +1,17 @@
 <template>
-  <div class="flex flex-col flex-wrap sm:flex-row"></div>
+  <div>Add Category</div>
 </template>
 
 <script>
 export default {
-  name: "Dashboard",
+  name: "Add-Category",
   components: {},
   data() {
     return {};
-  }
+  },
+  methods: {}
 };
 </script>
+
 <style>
 </style>
