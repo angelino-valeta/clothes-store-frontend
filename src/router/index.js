@@ -9,9 +9,11 @@ import Register from "@/views/User/Register.vue";
 import Welcome from "@/views/User/Welcome.vue";
 import Login from "@/views/User/Login.vue";
 import Profile from "@/views/User/Profile.vue";
+import UpdatePassword from "@/views/User/UpdatePassword.vue";
 
 // Products Routers
 import Product from "@/views/Product/ProductDetails.vue";
+import News from "@/views/Product/News.vue";
 import Products from "@/views/Product/Products.vue";
 import CategoryProducts from "@/views/Product/CategoryProducts";
 
@@ -111,6 +113,15 @@ const routes = [{
     }
   },
   {
+    path: "/updatePassword",
+    name: "update-password",
+    component: UpdatePassword,
+    meta: {
+      authWhenLogged: true,
+      title: "Actualiar password"
+    }
+  },
+  {
     path: "/product/:productId",
     name: "ProductDetails",
     component: Product,
@@ -127,7 +138,15 @@ const routes = [{
     }
   },
   {
-    path: "/products/:category",
+    path: "/news",
+    name: "news-products",
+    component: News,
+    meta: {
+      title: "Novidades"
+    }
+  },
+  {
+    path: "/categories",
     name: "category-products",
     component: CategoryProducts,
     meta: {
