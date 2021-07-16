@@ -1,31 +1,20 @@
 <template>
-  <div class="max-w-md m-auto py-12">
-    <div class="px-5 py-4 shadow-2xl bg-red-500 text-white rounded-lg flex justify-center">
-      <span class="text-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-8 w-8 text-white"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01"
-          />
-        </svg>
-      </span>
-      <p class="text-center">Desculpe! essa funcionalidade ainda não está terminada.</p>
+  <div>
+    <div class="w-full xl:max-w-screen-xl mx-auto flex items-center justify-between">
+      <h2 class="text-xl font-semibold text-gray-500">Todos Produtos</h2>
     </div>
+    <ProductList />
   </div>
 </template>
 
 <script>
+import ProductList from "@/components/Home/ProductList.vue";
+
 export default {
-  name: "Products",
-  components: {},
+  name: "Products category",
+  components: {
+    ProductList
+  },
   data() {
     return {};
   },
