@@ -3,13 +3,11 @@
     <div
       class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-10 md:px-20 text-gray-50 dark:text-white"
     >
-      <ul
-        class="text-lg font-light pb-8 flex flex-wrap justify-center tracking-wide"
-      >
+      <ul class="text-lg font-light pb-8 flex flex-wrap justify-center tracking-wide">
         <li class="w-full sm:w-1/2 md:w-1/4 pr-2 sm:pr-6">
           <div class="text-left">
-            <router-link class="brand" to="/">
-              <img :src="logo" alt="Logo Helena" />
+            <router-link to="/">
+              <img :src="logo" class="w-16 block" alt="Logo Helena" />
             </router-link>
           </div>
         </li>
@@ -17,56 +15,41 @@
           <div class="text-left">
             <h2
               class="mb-6 text-white dark:text-gray-200 text-xl uppercase font-bold tracking-wider"
-            >
-              Empresa
-            </h2>
+            >Empresa</h2>
             <ul>
               <li class="mb-4">
                 <router-link to="/">
                   <a
-                    class="text-lg
-                                   hover:underline hover:text-white transition-colors duration-200"
-                    >Sobre</a
-                  >
-                </router-link>
-              </li>
-              <li class="mb-4">
-                <router-link to="/">
-                  <a
-                    class="text-lg
-                                   hover:underline hover:text-white transition-colors duration-200"
-                  >
-                    Entrar em contacto
-                  </a>
-                </router-link>
-              </li>
-              <li class="mb-4">
-                <router-link to="/">
-                  <a
-                    class="text-lg
-                                   hover:underline hover:text-white transition-colors duration-200"
-                  >
-                    Blog
-                  </a>
-                </router-link>
-              </li>
-              <li class="mb-4">
-                <router-link to="/">
-                  <a
-                    class="text-lg
-                                 hover:underline hover:text-white transition-colors duration-200"
-                  >
-                    Termos de uso
-                  </a>
+                    class="text-lg hover:underline hover:text-white transition-colors duration-200"
+                  >Sobre</a>
                 </router-link>
               </li>
               <li class="mb-4">
                 <router-link to="/">
                   <a
                     class="text-lg hover:underline hover:text-white transition-colors duration-200"
-                  >
-                    Política de privacidade
-                  </a>
+                  >Entrar em contacto</a>
+                </router-link>
+              </li>
+              <li class="mb-4">
+                <router-link to="/">
+                  <a
+                    class="text-lg hover:underline hover:text-white transition-colors duration-200"
+                  >Blog</a>
+                </router-link>
+              </li>
+              <li class="mb-4">
+                <router-link to="/">
+                  <a
+                    class="text-lg hover:underline hover:text-white transition-colors duration-200"
+                  >Termos de uso</a>
+                </router-link>
+              </li>
+              <li class="mb-4">
+                <router-link to="/">
+                  <a
+                    class="text-lg hover:underline hover:text-white transition-colors duration-200"
+                  >Política de privacidade</a>
                 </router-link>
               </li>
             </ul>
@@ -76,27 +59,20 @@
           <div class="text-left">
             <h2
               class="mb-6 text-white dark:text-gray-200 text-xl uppercase font-bold tracking-wider"
-            >
-              Links
-            </h2>
+            >Links</h2>
             <ul>
               <li class="mb-4">
                 <router-link to="/">
                   <a
-                    class="
-                                  hover:underline hover:text-white transition-colors duration-200"
-                    >Novidades</a
-                  >
+                    class="hover:underline hover:text-white transition-colors duration-200"
+                  >Novidades</a>
                 </router-link>
               </li>
               <li class="mb-4">
                 <router-link to="/">
                   <a
-                    class="
-                                  hover:underline hover:text-white transition-colors duration-200"
-                  >
-                    Categorias
-                  </a>
+                    class="hover:underline hover:text-white transition-colors duration-200"
+                  >Categorias</a>
                 </router-link>
               </li>
             </ul>
@@ -106,37 +82,25 @@
           <div class="text-left">
             <h2
               class="mb-6 text-white dark:text-gray-200 text-xl uppercase font-bold tracking-wider"
-            >
-              Siga nos
-            </h2>
+            >Siga nos</h2>
             <ul>
               <li class="mb-4">
                 <router-link to="/">
                   <a
-                    class="
-                              hover:underline hover:text-white transition-colors duration-200"
-                    >Facebook</a
-                  >
+                    class="hover:underline hover:text-white transition-colors duration-200"
+                  >Facebook</a>
                 </router-link>
               </li>
               <li class="mb-4">
                 <router-link to="/">
                   <a
-                    class="
-                              hover:underline hover:text-white transition-colors duration-200"
-                  >
-                    Instagram
-                  </a>
+                    class="hover:underline hover:text-white transition-colors duration-200"
+                  >Instagram</a>
                 </router-link>
               </li>
               <li class="mb-4">
                 <router-link to="/">
-                  <a
-                    class="
-                               hover:underline hover:text-white transition-colors duration-200"
-                  >
-                    Twitter
-                  </a>
+                  <a class="hover:underline hover:text-white transition-colors duration-200">Twitter</a>
                 </router-link>
               </li>
             </ul>
@@ -159,19 +123,14 @@ export default {
   name: "Footer",
   data() {
     return {
-      logo,
+      logo
     };
-  },
+  }
 };
 </script>
 
 <style>
 .bg-footer {
   background-color: #212831;
-}
-.brand img {
-  width: 80px;
-  display: block;
-  padding-left: 10px;
 }
 </style>
