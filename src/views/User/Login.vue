@@ -5,8 +5,8 @@
         class="max-w-sm mx-auto flex flex-col justify-center px-8 my-auto md:justify-start md:px-2"
       >
         <div class="flex justify-center items-center mb-2">
-          <router-link to="/" class="brand">
-            <img :src="logo" alt="logo helena" />
+          <router-link to="/">
+            <img :src="logo" class="w-16 mb-4" alt="logo helena" />
           </router-link>
         </div>
         <p class="text-2xl text-center text-white">Bem vindo a sua loja online.</p>
