@@ -58,11 +58,13 @@
                       {{ product.price }}
                       <span class="font-light text-sm">kz</span>
                     </div>
-                    <!-- <div class="flex space-x-2 text-sm font-medium justify-start mb-6 py-2">
-                      <button class="transition ease-in duration-300 inline-flex items-center text-sm font-medium mb-2 md:mb-0 h-bg-primary px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-lg ">
+                    <div class="flex space-x-2 text-sm font-medium justify-start mb-6 py-2">
+                      <button
+                        class="transition ease-in duration-300 inline-flex items-center text-sm font-medium mb-2 md:mb-0 h-bg-primary px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-lg"
+                      >
                         <span>Add Cart</span>
                       </button>
-                    </div>-->
+                    </div>
                   </div>
                 </div>
               </div>
