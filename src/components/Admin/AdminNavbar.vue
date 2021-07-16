@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full shadow-lg h-bg-primary dark:bg-gray-700 items-center h-16 rounded-2xl z-40">
+  <header class="w-full shadow-lg bg-white dark:bg-gray-700 items-center h-16 rounded-2xl z-40">
     <div class="relative z-20 flex flex-col justify-center h-full px-3 mx-auto flex-center">
       <div class="relative items-center pl-1 flex w-full lg:max-w-68 sm:pr-2 sm:ml-0">
         <div class="container relative left-0 z-50 flex w-3/4 h-auto">
@@ -44,7 +44,7 @@
                 <div class="relative inline-block text-left dropdown">
                   <span class>
                     <button
-                      class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out rounded-md hover:text-gray-00 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
+                      class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
                       type="button"
                       aria-haspopup="true"
                       aria-expanded="true"
