@@ -11,7 +11,7 @@ export default {
         return Api().get(`products/featuredIn?limit=${limit}`)
     },
     getNewsProduct(limit) {
-        return Api().get(`products/news/${limit}`)
+        return Api().get(`products/news/?limit=${limit}`)
     },
     getRecommendation({
         categoryId,
