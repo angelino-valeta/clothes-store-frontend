@@ -12,7 +12,7 @@
     </div>
     <div class="w-full m-auto md:w-1/2">
       <div class="mb-4 sm:ml-4 xl:mr-4">
-        <div class="shadow-lg rounded-2xl p-12 bg-white dark:bg-gray-700 w-full">
+        <div class="shadow-lg rounded-2xl py-6 px-6 bg-white dark:bg-gray-700 w-full">
           <div>
             <div>
               <form @submit.stop.prevent="createProduct()">
