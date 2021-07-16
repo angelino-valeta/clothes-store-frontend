@@ -1,26 +1,18 @@
 <template>
-  <div
-    class="fixed w-full px-6 shadow-lg bg-white dark:bg-gray-700 h-16 items-center z-50 marginb"
-  >
-    <div
-      class="w-full xl:max-w-screen-xl mx-auto h-16 flex items-center justify-between"
-    >
+  <div class="fixed w-full px-6 shadow-lg bg-white dark:bg-gray-700 h-16 items-center z-50 marginb">
+    <div class="w-full xl:max-w-screen-xl mx-auto h-16 flex items-center justify-between">
       <div class="flex items-center">
         <div class="w-16">
-          <router-link to="/" class="brand">
-            <img :src="logo" class="w-8" alt="logo helena" />
+          <router-link to="/">
+            <img :src="logo" class="w-8" alt="Logo Helena" />
           </router-link>
         </div>
         <div class="space-x-2">
-          <router-link class="text-gray-500 tracking-normal" to="/caregorias">
-            Categorias
-          </router-link>
-          <router-link class="text-gray-500 tracking-normal" to="/novidades">
-            Novidades
-          </router-link>
+          <router-link class="text-gray-500 tracking-normal" to="/categories">Categorias</router-link>
+          <router-link class="text-gray-500 tracking-normal" to="/news">Novidades</router-link>
         </div>
       </div>
-      <div class="">
+      <div class>
         <div class="relative left-0 z-50 flex h-16">
           <div class="relative flex items-center w-full h-full group">
             <div
@@ -35,9 +27,7 @@
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path
-                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                ></path>
+                <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
             <svg
@@ -47,7 +37,7 @@
             >
               <path
                 d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"
-              ></path>
+              />
             </svg>
             <input
               type="text"
@@ -92,8 +82,8 @@
           <div v-if="userLoggedIn">
             <div class="flex items-center justify-center">
               <div class="relative inline-block text-left dropdown">
-                <span class=""
-                  ><button
+                <span class>
+                  <button
                     class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
                     type="button"
                     aria-haspopup="true"
@@ -101,18 +91,15 @@
                     aria-controls="headlessui-menu-items-117"
                   >
                     <span>{{ user.name }}</span>
-                    <svg
-                      class="w-5 h-5 ml-2 -mr-1"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
+                    <svg class="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor">
                       <path
                         fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd"
-                      ></path>
-                    </svg></button
-                ></span>
+                      />
+                    </svg>
+                  </button>
+                </span>
                 <div
                   class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95"
                 >
@@ -126,9 +113,7 @@
                       <p class="text-sm leading-5">Logado com</p>
                       <p
                         class="text-sm font-medium leading-5 text-gray-900 truncate"
-                      >
-                        {{ user.email }}
-                      </p>
+                      >{{ user.email }}</p>
                     </div>
                     <div class="py-1">
                       <a
@@ -136,18 +121,20 @@
                         tabindex="0"
                         class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
                         role="menuitem"
-                      >
-                        Perfil
-                      </a>
+                      >Perfil</a>
+                      <a
+                        href="/orders"
+                        tabindex="0"
+                        class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                        role="menuitem"
+                      >Encomendas</a>
                       <router-link
                         v-if="admin"
                         to="/admin/dashboard"
                         tabindex="0"
                         class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
                         role="menuitem"
-                      >
-                        Dashboard
-                      </router-link>
+                      >Dashboard</router-link>
                     </div>
                     <div class="py-1">
                       <button
@@ -155,9 +142,7 @@
                         tabindex="3"
                         class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
                         role="menuitem"
-                      >
-                        Sair
-                      </button>
+                      >Sair</button>
                     </div>
                   </div>
                 </div>
@@ -168,9 +153,7 @@
             <router-link
               to="/login"
               class="text-white shadow-md h-bg-secondary rounded-2xl ml-4 px-4 py-2 font-semibold text-lg"
-            >
-              Login
-            </router-link>
+            >Login</router-link>
           </div>
         </div>
       </div>
@@ -189,7 +172,7 @@ export default {
       user: {},
       admin: false,
       userLoggedIn: false,
-      searchTxt: "",
+      searchTxt: ""
     };
   },
   async mounted() {
@@ -204,8 +187,8 @@ export default {
       this.$store.dispatch("CurrentUser/setToken", "");
       this.$store.dispatch("CurrentUser/setUser", {});
       window.location.reload();
-    },
-  },
+    }
+  }
 };
 </script>
 
