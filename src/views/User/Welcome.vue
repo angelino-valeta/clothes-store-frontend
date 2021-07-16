@@ -25,7 +25,7 @@
         <span class="font-semibold" v-if="userLoggedIn">{{ user.name }}</span>, Bem vindo a nossa loja.
       </p>
       <router-link
-        to="/addaddress"
+        to="/categories"
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg mt-6"
         style="background-image: linear-gradient(to right, #662d91 100%,#afa2aa 100%)"
       >continuar</router-link>
