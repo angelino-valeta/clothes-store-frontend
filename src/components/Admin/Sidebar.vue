@@ -2,8 +2,8 @@
   <div class="h-screen hidden lg:block my-4 ml-4 shadow-lg relative w-80">
     <div class="bg-white h-full rounded-2xl dark:bg-gray-700">
       <div class="flex items-center justify-center pt-6">
-        <router-link to="/" class="brand">
-          <img :src="logo" class="w-8" alt="logo helena" />
+        <router-link to="/">
+          <img :src="logo" class="w-12" alt="Logo Helena" />
         </router-link>
       </div>
       <nav class="mt-6">
@@ -95,7 +95,7 @@
                 />
               </svg>
             </span>
-            <span class="mx-4 text-sm font-normal">Orders</span>
+            <span class="mx-4 text-sm font-normal">Encomendas</span>
           </router-link>
           <router-link
             to="/admin/users"
