@@ -3,10 +3,10 @@
     <div class="w-full sm:w-1/2 xl:w-1/3">
       <div class="mb-4 sm:ml-4 xl:mr-4">
         <div class="shadow-lg rounded-2xl bg-white dark:bg-gray-700 w-full">
-          <div class="py-2 px-4 text-gray-600 flex items-center justify-between">
+          <div class="py-2 px-4 text-gray-600 flex items-center justify-around">
             <div class="relative">
               <p class="text-gray-700 dark:text-white font-semibold border-b border-gray-200">
-                <router-link class="hover:underline" to="/admin/orders">Orders</router-link>
+                <router-link class="hover:underline" to="/admin/orders">Encomendas</router-link>
               </p>
               <div class="flex items-end space-x-2 my-6">
                 <p class="text-5xl text-black dark:text-white font-bold">{{ totalOrders }}</p>
@@ -15,7 +15,7 @@
             <div class>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-24 w-24 h-secondary"
+                class="h-16 w-16"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -35,7 +35,7 @@
     <div class="w-full sm:w-1/2 xl:w-1/3">
       <div class="mb-4 sm:ml-4 xl:mr-4">
         <div class="shadow-lg rounded-2xl bg-white dark:bg-gray-700 w-full">
-          <div class="py-2 px-4 text-gray-600 flex items-center justify-between">
+          <div class="py-2 px-4 text-gray-600 flex items-center justify-around">
             <div class="relative">
               <p class="text-gray-700 dark:text-white font-semibold border-b border-gray-200">
                 <router-link class="hover:underline" to="/admin/products">Produtos</router-link>
@@ -47,7 +47,7 @@
             <div class>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-primary h-24 w-24"
+                class="h-16 w-16"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -67,8 +67,8 @@
     <div class="w-full sm:w-1/2 xl:w-1/3">
       <div class="mb-4 sm:ml-4 xl:mr-4">
         <div class="shadow-lg rounded-2xl bg-white dark:bg-gray-700 w-full">
-          <div class="py-2 px-4 text-gray-600 flex items-center justify-between">
-            <div class="relative">
+          <div class="py-2 px-4 text-gray-600 flex items-center justify-around">
+            <div class>
               <p class="text-gray-700 dark:text-white font-semibold border-b border-gray-200">
                 <router-link class="hover:underline" to="/admin/users">Clientes</router-link>
               </p>
@@ -79,7 +79,7 @@
             <div class>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-24 w-24 h-dark"
+                class="h-16 w-16"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
