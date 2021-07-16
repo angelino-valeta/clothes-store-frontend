@@ -1,29 +1,24 @@
 <template>
   <div class="flex flex-wrap w-full">
     <div class="w-1/2 shadow-2xl h-bg-primary">
-      <img
-        class="hidden object-cover w-full h-screen md:block"
-        :src="coverImage"
-      />
+      <img class="hidden object-cover w-full h-screen md:block" :src="coverImage" />
     </div>
     <div class="flex flex-col w-full md:w-1/2 h-bg-secondary">
       <div
         class="max-w-sm mx-auto flex flex-col justify-center px-8 my-auto md:justify-start md:px-2"
       >
         <div class="flex justify-center items-center mb-2">
-          <router-link to="/" class="brand">
-            <img :src="logo" alt="logo helena" />
+          <router-link to="/">
+            <img :src="logo" class="w-16 mb-4" alt="logo helena" />
           </router-link>
         </div>
-        <p class="text-2xl text-center text-white">
-          Bem vindo a nossa loja online.
-        </p>
+        <p class="text-2xl text-center text-white">Bem vindo a nossa loja online.</p>
         <form @submit.stop.prevent="createAccount" class="flex flex-col pt-4">
-          <div class="">
+          <div class>
             <div class="flex flex-col mb-2">
               <div class="flex relative">
                 <span
-                  class="rounded-l-md inline-flex  items-center px-3 border-t border-l border-b  border-gray-300 shadow-sm h-bg-dark text-white text-sm"
+                  class="rounded-l-md inline-flex items-center px-3 border-t border-l border-b border-gray-300 shadow-sm h-bg-dark text-white text-sm"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +41,7 @@
                   type="text"
                   id="fullName"
                   required
-                  class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   placeholder="Seu nome"
                 />
               </div>
@@ -54,7 +49,7 @@
             <div class="flex flex-col mb-2">
               <div class="flex relative">
                 <span
-                  class="rounded-l-md inline-flex  items-center px-3 border-t border-l border-b  border-gray-300 h-bg-dark text-white shadow-sm text-sm"
+                  class="rounded-l-md inline-flex items-center px-3 border-t border-l border-b border-gray-300 h-bg-dark text-white shadow-sm text-sm"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +71,7 @@
                   type="email"
                   id="email"
                   required
-                  class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   placeholder="Seu email"
                 />
               </div>
@@ -84,7 +79,7 @@
             <div class="flex flex-col mb-2">
               <div class="flex relative">
                 <span
-                  class="rounded-l-md inline-flex  items-center px-3 border-t border-l border-b  border-gray-300 h-bg-dark text-white shadow-sm text-sm"
+                  class="rounded-l-md inline-flex items-center px-3 border-t border-l border-b border-gray-300 h-bg-dark text-white shadow-sm text-sm"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +101,7 @@
                   type="text"
                   id="phone"
                   required
-                  class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   placeholder="Nº de telefone"
                 />
               </div>
@@ -114,7 +109,7 @@
             <div class="flex flex-col">
               <div class="flex relative mb-2">
                 <span
-                  class="rounded-l-md inline-flex  items-center px-3 border-t border-l border-b  border-gray-300 h-bg-dark text-white shadow-sm text-sm"
+                  class="rounded-l-md inline-flex items-center px-3 border-t border-l border-b border-gray-300 h-bg-dark text-white shadow-sm text-sm"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -136,15 +131,15 @@
                   type="password"
                   id="password"
                   required
-                  class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   placeholder="Password"
                 />
               </div>
             </div>
             <div class="flex flex-col mb-6">
-              <div class="flex relative ">
+              <div class="flex relative">
                 <span
-                  class="rounded-l-md inline-flex  items-center px-3 border-t border-l border-b  border-gray-300 h-bg-dark text-white shadow-sm text-sm"
+                  class="rounded-l-md inline-flex items-center px-3 border-t border-l border-b border-gray-300 h-bg-dark text-white shadow-sm text-sm"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +161,7 @@
                   type="password"
                   id="confirmPassword"
                   required
-                  class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  class="rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   placeholder="Confirmar Password"
                 />
               </div>
@@ -177,17 +172,13 @@
             type="submit"
             class="w-full rounded-lg px-4 py-2 font-bold text-center text-lg text-white transition duration-200 ease-in h-bg-primary shadow-md hover:text-black hover:bg-white focus:outline-none focus:ring-2"
           >
-            <span class="w-full">
-              Criar Conta
-            </span>
+            <span class="w-full">Criar Conta</span>
           </button>
         </form>
         <div class="pt-12 pb-12 text-center text-gray-50">
           <p>
             Já tens uma conta?
-            <router-link to="/login" class="font-semibold underline">
-              Faça login aqui.
-            </router-link>
+            <router-link to="/login" class="font-semibold underline">Faça login aqui.</router-link>
           </p>
         </div>
       </div>
@@ -214,10 +205,9 @@ export default {
       email: null,
       password: null,
       phone: null,
-      validEmail: true,
       confirmPassword: null,
       emailMessage: null,
-      message: null,
+      message: null
     };
   },
   mounted() {},
@@ -233,7 +223,7 @@ export default {
           name: this.fullName,
           email: this.email,
           phone: this.phone,
-          password: this.password,
+          password: this.password
         });
         this.$store.dispatch("CurrentUser/setToken", response.data.token);
         this.$store.dispatch("CurrentUser/setUser", response.data.data);
@@ -243,8 +233,8 @@ export default {
         this.message = error.response.data.message;
         Vue.$toast.error(this.message);
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
